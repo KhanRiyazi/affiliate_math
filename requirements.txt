@@ -1,4 +1,4 @@
-# FastAPI framework
+# FastAPI framework - updated for compatibility
 fastapi==0.104.1
 
 # ASGI server
@@ -6,22 +6,25 @@ uvicorn==0.24.0
 
 # Database ORM
 sqlalchemy==2.0.23
-greenlet==3.2.4  # explicitly pin greenlet for SQLAlchemy
+greenlet==3.2.4
 
 # Templating
 jinja2==3.1.2
-MarkupSafe==2.1.3  # compatible with Jinja2
+MarkupSafe==2.1.5  # updated for Python 3.13
 
 # File uploads
 python-multipart==0.0.6
 aiofiles==23.2.1
 
-# Data validation - UPDATED FOR COMPATIBILITY
+# Data validation - UPDATED for FastAPI 0.104.1 compatibility
 pydantic==2.5.0
 pydantic-core==2.14.0
-typing-extensions>=4.8.0  # required by fastapi 0.104.1
+typing-extensions>=4.8.0  # fixed: was 4.7.1
 
 # FastAPI dependencies
 anyio==3.7.1
 starlette==0.27.0
 sniffio==1.3.1
+
+# Additional dependencies for Python 3.13 compatibility
+email-validator>=2.0.0
